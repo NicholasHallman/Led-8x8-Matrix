@@ -20,5 +20,5 @@ try:
     while True:
         input = input("Input a char or number: ")
         set_matrix(input)
-except:
+except KeyboardInterrupt:
     pass
