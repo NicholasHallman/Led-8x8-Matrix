@@ -5,7 +5,7 @@ from PIL import Image
 
 import time
 
-INTERVAL = 1/60
+INTERVAL = 1/10
 
 serial = spi(port=0, device=0, gpio=noop())
 device = max7219(serial)
