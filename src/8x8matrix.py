@@ -18,7 +18,7 @@ def set_matrix(char):
 
 try:
     while True:
-        input = input("Input a char or number: ")
-        set_matrix(input)
+        inp = input("Input a char or number: ")
+        set_matrix(inp)
 except KeyboardInterrupt:
     pass
