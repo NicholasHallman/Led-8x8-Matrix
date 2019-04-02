@@ -7,10 +7,13 @@ import time
 
 INTERVAL = 1000/60
 
+serial = spi(port=0, device=0, gpio=noop())
+device = max7219(serial)
+
 row = 0
 
 while True:
-    with canvas(max7219) as draw:
+    with canvas(device) as draw:
         draw.line([(row,0),(row,7)],None)
         row += 1
         if(row == 8):
