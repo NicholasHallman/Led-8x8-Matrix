@@ -14,7 +14,7 @@ row = 0
 
 while True:
     with canvas(device) as draw:
-        draw.line([(row,0),(row,7)],None)
+        draw.line([(row,0),(row,7)],fill=128, width=1,joint=None )
         row += 1
         if(row == 8):
             row = 0
