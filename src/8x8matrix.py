@@ -8,18 +8,17 @@ from PIL import Image
 serial = spi(port=0, device=0, gpio=noop())
 device = max7219(serial)
 
-def set_matrix(number):
-
-    number = str(number)
+def set_matrix(char):
 
     with canvas(device) as draw:
-        legacy.text(draw, (0,0), "Your string here", fill="white", 
+        legacy.text(draw, (0,0), char, fill="white", 
         font=proportional(CP437_FONT) )
     
     return None
 
 try:
     while True:
-        set_matrix(3)
+        input = input("Input a char or number: ")
+        set_matrix(input)
 except:
     pass
