@@ -7,9 +7,6 @@ import time
 
 INTERVAL = 1000/60
 
-im = Image.new(1,(8,8), color=0 )
-pixels = im.load()
-
 row = 0
 
 while True:
