@@ -29,6 +29,7 @@ def draw():
         draw.point(apple,fill=128)
 
 def moveSnake():
+    global direction
     kb.kbhit()
     newDir = kb.getarrow()
     if newDir is not None:
