@@ -109,6 +109,9 @@ def checkRules():
             if i != 0 and snake[i] == snake[0]:
                 print("Game Over")
                 sys.exit()
+    if len(snake) == (8 * 8):
+        print("You win!")
+        sys.exit()
 
 def gameLoop():
     while True:
