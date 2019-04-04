@@ -83,7 +83,7 @@ def moveSnake():
 
 def placeApple():
     global apple
-    apple = (random.randint(0,8), random.randint(0,8))
+    apple = (random.randint(0,7), random.randint(0,7))
     collide = True
     while collide:
         collide = False
