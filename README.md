@@ -53,7 +53,7 @@ with canvas(device) as draw:
 
 ## Challenges
 
-    Familiarity with pip and other package managers was required to do this project. To add, Luma and its device packages abstract away the complications of controling the MAX7219. However, it prevents the programmer from fully understanding what the library is doing, which is usefull in many cases. Pillow is also a large component of the Luma library. People who are not already familliar with pillow will have difficulty understanding how to control the 8x8 matrix.
+Familiarity with pip and other package managers was required to do this project. To add, Luma and its device packages abstract away the complications of controling the MAX7219. However, it prevents the programmer from fully understanding what the library is doing, which is usefull in many cases. Pillow is also a large component of the Luma library. People who are not already familliar with pillow will have difficulty understanding how to control the 8x8 matrix.
 
 ## Issues
-    The 8x8 matrix on its own is small which limits the scope of any project. This limitation makes drawing multiple characters and numbers impossible and only allows for primitive praphics of a single color.
+The 8x8 matrix on its own is small which limits the scope of any project. This limitation makes drawing multiple characters and numbers impossible and only allows for primitive praphics of a single color.
