@@ -19,7 +19,7 @@ kb = KBHit()
 
 snake = [(4,4)]
 direction = 0 # 0 up, 1 right, 2 down, 3 left
-apple = (0,0)
+apple = (random.randint(0,7), random.randint(0,7))
 released = True
 
 
