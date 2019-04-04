@@ -96,10 +96,16 @@ class KBHit:
             vals = [72, 77, 80, 75]
             
         else:
-            c = sys.stdin.read(3)[2]
+            r = sys.stdin.read(3)
+            if len(r) > 2:
+                c = r[2]
+            else:
+                c = None
             vals = [65, 67, 66, 68]
-        
-        return vals.index(ord(c))
+        if c != None:
+            return vals.index(ord(c))
+        else:
+            return None
         
 
     def kbhit(self):
