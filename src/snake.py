@@ -30,8 +30,10 @@ def draw():
 
 def moveSnake():
     kb.kbhit()
-    direction = kb.getarrow()
-
+    newDir = kb.getarrow()
+    if newDir is not None:
+        direction = newDir
+    
     last = (-1,-1)    
     if direction == 0:
         for i in range(len(snake)):
