@@ -92,9 +92,9 @@ def checkRules():
         snake.append(deepcopy(snake[-1]))
 
 def gameLoop():
-    with Listener(on_press=onPress, on_release=onRelease) as listener{
+    with Listener(on_press=onPress, on_release=onRelease) as listener:
         listener.join()
-    }
+    
     while True:
         moveSnake()
         checkRules()
