@@ -104,10 +104,11 @@ def checkRules():
     if snake[0] == apple:
         placeApple()
         snake.append(deepcopy(snake[-1]))
-    for i in range(len(snake)):
-        if i != 0 and snake[i] == snake[0]:
-            print("Game Over")
-            sys.exit()
+    if len(snake) > 3:
+        for i in range(len(snake)):
+            if i != 0 and snake[i] == snake[0]:
+                print("Game Over")
+                sys.exit()
 
 def gameLoop():
     while True:
