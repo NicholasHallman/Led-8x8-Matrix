@@ -97,7 +97,7 @@ class KBHit:
             c = sys.stdin.read(3)[2]
             vals = [65, 67, 66, 68]
         
-        return vals.index(ord(c.decode('utf-8')))
+        return vals.index(ord(c))
         
 
     def kbhit(self):
