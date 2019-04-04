@@ -38,7 +38,7 @@ def moveSnake():
             if i == 0:
                 last = snake[i]
                 snake[i] = ( snake[i][0], snake[i][1] - 1 )
-            if snake[i] != last:
+            elif snake[i] != last:
                 templast = snake[i]
                 snake[i] = last
                 last = templast
@@ -50,7 +50,7 @@ def moveSnake():
             if i == 0:
                 last = snake[i]
                 snake[i] = ( snake[i][0] + 1, snake[i][1] )
-            if snake[i] != last:
+            elif snake[i] != last:
                 templast = snake[i]
                 snake[i] = last
                 last = templast
@@ -61,7 +61,7 @@ def moveSnake():
             if i == 0:
                 last = snake[i]
                 snake[i] = ( snake[i][0], snake[i][1] + 1 )
-            if snake[i] != last:
+            elif snake[i] != last:
                 templast = snake[i]
                 snake[i] = last
                 last = templast
@@ -72,7 +72,7 @@ def moveSnake():
             if i == 0:
                 last = snake[i]
                 snake[i] = ( snake[i][0] - 1, snake[i][1] )
-            if snake[i] != last:
+            elif snake[i] != last:
                 templast = snake[i]
                 snake[i] = last
                 last = templast
