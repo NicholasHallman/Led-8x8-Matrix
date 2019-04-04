@@ -1,6 +1,6 @@
 # Led 8x8 Matrix
 
-# Resources
+## Resources
 
 How can you install Luma for the 8x8 LED Matrix?
 https://luma-led-matrix.readthedocs.io/en/latest/install.html
@@ -16,6 +16,8 @@ https://gist.github.com/nrdobie/8193350
 
 Is Luma open source? Where can I find more exmaples?
 https://github.com/rm-hull/luma.led_matrix
+
+## Instructions
 
 Install Pip
 ```bash
@@ -41,5 +43,17 @@ with canvas(device) as draw:
     
     return None
 ```
+## Diagram
 
-[![Block Diagram]()]
+![Block Diagram](https://raw.githubusercontent.com/NicholasHallman/Led-8x8-Matrix/master/exploration%20diagram.png)
+
+## Video Demonstration
+
+[![Exploration Demo](http://img.youtube.com/vi/l2-7ydX_DR0/0.jpg)](http://www.youtube.com/watch?v=l2-7ydX_DR0)
+
+## Challenges
+
+    Familiarity with pip and other package managers was required to do this project. To add, Luma and its device packages abstract away the complications of controling the MAX7219. However, it prevents the programmer from fully understanding what the library is doing, which is usefull in many cases. Pillow is also a large component of the Luma library. People who are not already familliar with pillow will have difficulty understanding how to control the 8x8 matrix.
+
+## Issues
+    The 8x8 matrix on its own is small which limits the scope of any project. This limitation makes drawing multiple characters and numbers impossible and only allows for primitive praphics of a single color.
