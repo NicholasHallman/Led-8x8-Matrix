@@ -10,7 +10,7 @@ import time
 import random
 import sys
 
-INTERVAL = 1/10
+INTERVAL = 1/5
 
 serial = spi(port=0, device=0, gpio=noop())
 device = max7219(serial)  
@@ -98,10 +98,16 @@ def placeApple():
 def checkRules():
     if snake[0][0] < 0 or snake[0][0] > 7 or snake[0][1] < 0 or snake[0][1] > 7:
         #snake out of bounds
+        print("Game Over")
         sys.exit()
+        
     if snake[0] == apple:
         placeApple()
         snake.append(deepcopy(snake[-1]))
+    for i in range(len(snake)):
+        if i != 0 and snake[i] == snake[0]:
+            print("Game Over")
+            sys.exit()
 
 def gameLoop():
     while True:
