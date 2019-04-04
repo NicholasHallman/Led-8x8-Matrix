@@ -60,7 +60,7 @@ def moveSnake():
         for i in range(len(snake)):
             if snake[i] != last:
                 last = snake[i]
-                snake[i] = ( snake[i][0] + 1, snake[i][1] )
+                snake[i] = ( snake[i][0] - 1, snake[i][1] )
             else:
                 last = snake[i]
 
