@@ -20,6 +20,9 @@ snake = []
 direction = 0 # 0 up, 1 right, 2 down, 3 left
 apple = (0,0)
 
+pygame.init()
+
+
 def draw():
     with canvas(device) as draw:
         draw.point(snake,fill=128)
@@ -94,6 +97,6 @@ def gameLoop():
         moveSnake()
         checkRules()
         draw()
+        time.sleep(INTERVAL)
 
-pygame.init()
 gameLoop()
