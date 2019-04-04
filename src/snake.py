@@ -2,11 +2,8 @@ from luma.core.interface.serial import spi, noop
 from luma.core.render import canvas
 from luma.led_matrix.device import max7219
 from PIL import Image
-
-import pygame
-from pygame.locals import *
 from copy import deepcopy
-
+from pynput.keyboard import Key, Listener
 import time
 import random
 import sys
@@ -19,9 +16,23 @@ device = max7219(serial)
 snake = []
 direction = 0 # 0 up, 1 right, 2 down, 3 left
 apple = (0,0)
+released = True
 
-pygame.init()
+def onPress(key):
+    if released:
+        if key == Key.up:
+            direction = 0
+        elif key == Key.right:
+            direction = 1
+        elif key == Key.down:
+            direction = 2
+        elif key == Key.left:
+            direction = 3
+        release = False
 
+
+def onRelease(key):
+    released = True
 
 def draw():
     with canvas(device) as draw:
@@ -29,18 +40,6 @@ def draw():
         draw.point(apple,fill=128)
 
 def moveSnake():
-    events = pygame.event.get()
-    for event in events:
-        if event.type == pygame.KEYDOWN:
-            if event.key == pygame.K_UP:
-                direction = 0
-            elif event.key == pygame.K_RIGHT:
-                direction = 1
-            elif event.key == pygame.K_DOWN:
-                direction = 2
-            elif event.key == pygame.K_LEFT:
-                direction = 3
-
     last = (-1,-1)    
     if direction == 0:
         for point in snake:
@@ -93,6 +92,9 @@ def checkRules():
         snake.append(deepcopy(snake[-1]))
 
 def gameLoop():
+    with Listener(on_press=onPress, on_release=onRelease) as listener{
+        listener.join()
+    }
     while True:
         moveSnake()
         checkRules()
