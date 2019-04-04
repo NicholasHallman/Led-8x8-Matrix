@@ -17,7 +17,7 @@ device = max7219(serial)
 
 kb = KBHit()
 
-snake = []
+snake = [(4,4)]
 direction = 0 # 0 up, 1 right, 2 down, 3 left
 apple = (0,0)
 released = True
