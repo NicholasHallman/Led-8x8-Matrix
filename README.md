@@ -2,19 +2,19 @@
 
 ## Resources
 
-How can you install Luma for the 8x8 LED Matrix?
+How can you install Luma for the 8x8 LED Matrix?  
 https://luma-led-matrix.readthedocs.io/en/latest/install.html
 
-How can you use luma with the 8x8? And is there a good reference?
+How can you use luma with the 8x8? And is there a good reference?  
 https://luma-led-matrix.readthedocs.io/en/latest/python-usage.html#x8-led-matrices
 
-Is there a datasheet for the MAX7219 used y the matrix?
+Is there a datasheet for the MAX7219 used y the matrix?  
 https://datasheets.maximintegrated.com/en/ds/MAX7219-MAX7221.pdf
 
-This project is for RaspberryPi but is there Arduino code available?
+This project is for RaspberryPi but is there Arduino code available?  
 https://gist.github.com/nrdobie/8193350
 
-Is Luma open source? Where can I find more exmaples?
+Is Luma open source? Where can I find more exmaples?  
 https://github.com/rm-hull/luma.led_matrix
 
 ## Instructions
