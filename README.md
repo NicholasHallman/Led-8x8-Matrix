@@ -1,5 +1,8 @@
 # Led 8x8 Matrix
 
+Nicholas Hallman 150357790  
+Yicheng Fan 146801620
+
 ## Resources
 
 How can you install Luma for the 8x8 LED Matrix?  
