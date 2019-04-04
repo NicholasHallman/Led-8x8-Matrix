@@ -35,32 +35,47 @@ def moveSnake():
     last = (-1,-1)    
     if direction == 0:
         for i in range(len(snake)):
-            snake[i]
-            if snake[i] != last:
+            if i == 0:
                 last = snake[i]
-                snake[i] = (snake[i][0],snake[i][1] - 1)
+                snake[i] = ( snake[i][0], snake[i][1] - 1 )
+            if snake[i] != last:
+                templast = snake[i]
+                snake[i] = last
+                last = templast
             else:
                 last = snake[i]
 
     elif direction == 1:
         for i in range(len(snake)):
-            if snake[i] != last:
+            if i == 0:
                 last = snake[i]
                 snake[i] = ( snake[i][0] + 1, snake[i][1] )
+            if snake[i] != last:
+                templast = snake[i]
+                snake[i] = last
+                last = templast
             else:
                 last = snake[i]
     elif direction == 2:
         for i in range(len(snake)):
-            if snake[i] != last:
+            if i == 0:
                 last = snake[i]
                 snake[i] = ( snake[i][0], snake[i][1] + 1 )
+            if snake[i] != last:
+                templast = snake[i]
+                snake[i] = last
+                last = templast
             else:
                 last = snake[i]
     elif direction == 3:
         for i in range(len(snake)):
-            if snake[i] != last:
+            if i == 0:
                 last = snake[i]
                 snake[i] = ( snake[i][0] - 1, snake[i][1] )
+            if snake[i] != last:
+                templast = snake[i]
+                snake[i] = last
+                last = templast
             else:
                 last = snake[i]
 
